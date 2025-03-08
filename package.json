@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npm run setup && next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 8081",
     "lint": "next lint",
     "admin": "tsx scripts/adminLogin.ts",
     "setup": "tsx scripts/setup.ts"

@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   web:
     build:
@@ -15,17 +13,7 @@ services:
       - JWT_SECRET=94af5eb59932b5aef9a3c1bfe8b1c8e860d5771324b2dee91414fccb21489a4ee9f980d02b887556d986fa88058f705bdf0cbd2c962da56ee2797a1b84e45c50
     volumes:
       - uploads:/app/public/uploads
-    depends_on:
-      - mongodb
     restart: always
 
-  mongodb:
-    image: mongo:latest
-    volumes:
-      - mongodb_data:/data/db
-    ports:
-      - "27017:27017"
-
 volumes:
-  mongodb_data:
   uploads: 
